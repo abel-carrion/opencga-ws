@@ -9,12 +9,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.bioinfo</groupId>
-			<artifactId>bioinfo-commons</artifactId>
-			<version>0.10.0</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
@@ -23,12 +17,6 @@
 			<groupId>org.bioinfo</groupId>
 			<artifactId>cellbase-lib</artifactId>
 			<version>3.0.0</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>nl.bitwalker</groupId>
-			<artifactId>user-agent-util</artifactId>
-			<version>1.6</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
@@ -75,6 +63,18 @@
 			<artifactId>gwt-user</artifactId>
 			<version>2.5.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.bioinfo</groupId>
+			<artifactId>bioinfo-commons</artifactId>
+			<version>0.10.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>nl.bitwalker</groupId>
+			<artifactId>user-agent-util</artifactId>
+			<version>1.6</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -117,15 +117,19 @@
 			<url>http://download.java.net/maven/2/</url>
 			<layout>default</layout>
 		</repository>
-
-
+		<repository>
+			<id>BioinfoSDK</id>
+			<name>Repository for Bioinfo SDK builds</name>
+			<url>http://repos.bioinfo.cipf.es/maven2</url>
+			<layout>default</layout>
+		</repository>
 	</repositories>
-
 	<distributionManagement>
 		<repository>
 			<id>default</id>
 			<name>Bioinfo Repository</name>
-			<url>http://repos.bioinfo.cipf.es/maven2/</url>
+			<!-- <url>http://repos.bioinfo.cipf.es/maven2/</url> -->
+			<url>scp://repos/var/www/gitorious/public/maven2</url>
 		</repository>
 	</distributionManagement>
 
